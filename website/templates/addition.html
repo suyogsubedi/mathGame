@@ -1,0 +1,36 @@
+{% extends 'base.html'%} {% block 'content'%} <br />
+<center>
+  <!--  -->
+  {% if my_answer %}
+  <div class="alert alert-{{ color }} alert-dismissible fade show" role="alert">
+    {{ my_answer }}
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  {% endif %}
+
+  <br />
+  <h1>{{ number1 }} + {{ number2 }}</h1>
+  <br />
+  <br />
+  <form action="{% url 'addition'%}" method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Write your answers here"
+        name="answer"
+      />
+      <input type="hidden" name="old_number1" value="{{ number1 }}" />
+      <input type="hidden" name="old_number2" value="{{ number2 }}" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</center>
+{%endblock%}

@@ -1,0 +1,14 @@
+{% extends 'base.html'%} {% block 'content'%}
+<!--  -->
+<center>
+  <br />
+  <br />
+  <br />
+  <div class="container-fluid bg-dark text-white">
+    <p>Here is a random number fact for you</p>
+    <p class="fact">Loading...</p>
+  </div>
+  {% load static %}
+  <script src="{% static 'scripts/facts.js'%}"></script>
+</center>
+{%endblock%}
