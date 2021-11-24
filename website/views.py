@@ -44,3 +44,7 @@ def multiplication(request):
 
 def division(request):
     return render(request, 'division.html',{})
+
+# Game
+def game(request):
+    return render(request,'game.html')

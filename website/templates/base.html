@@ -12,6 +12,9 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <!-- local css -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/game.css'%}" />
 
     <title>Math Game</title>
   </head>
@@ -63,7 +66,7 @@
             </li>
             <!-- Game Link -->
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}">Play Game</a>
+              <a class="nav-link" href="{% url 'game' %}">Play Game</a>
             </li>
             <!-- Learn Link -->
             <li class="nav-item">
