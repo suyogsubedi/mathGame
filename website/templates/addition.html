@@ -1,7 +1,7 @@
 {% extends 'base.html'%} {% block 'content'%} <br />
 <center>
   <!--  -->
-  {% if my_answer %}
+  {% if user.is_authenticated %} {% if my_answer %}
   <div class="alert alert-{{ color }} alert-dismissible fade show" role="alert">
     {{ my_answer }}
     <button
@@ -32,5 +32,11 @@
     <br />
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+  <!-- Show these -->
+
+  {%else%}
+  <h2>Login to view the contents</h2>
+
+  {%endif%}
 </center>
 {%endblock%}
