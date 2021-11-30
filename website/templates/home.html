@@ -4,6 +4,10 @@
   <br />
   <br />
   <br />
+  {% if user.is_authenticated %}
+  <h2 class="container bg-dark text-white">Welcome {{user.username}}</h2>
+
+  {% endif %}
   <div class="container-fluid bg-dark text-white">
     <p>Here is a random number fact for you</p>
     <p class="fact">Loading...</p>
