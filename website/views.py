@@ -110,3 +110,8 @@ def division(request):
 # Game
 def game(request):
     return render(request,'game.html')
+
+# Learn
+
+def learn(request):
+    return render(request,'learn.html')

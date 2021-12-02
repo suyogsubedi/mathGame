@@ -1,0 +1,81 @@
+{% extends 'base.html'%}
+<!--  -->
+
+<!--  -->
+{% block 'content'%}
+<center>
+  <h2>Learn Addition</h2>
+  <form class="addition" action="">
+    <input
+      class="additionFN form-control"
+      type="text"
+      placeholder="First Number"
+    />
+    <input
+      class="additionSN form-control"
+      type="text"
+      placeholder="Second Number"
+    />
+    <p class="additionResult">Add Two Numbers To See The Results</p>
+    <button class="btn btn-primary">Add</button>
+    <button class="btn btn-danger" type="reset">Clear Form</button>
+  </form>
+  <!-- Subtraction -->
+  <h2>Learn Subtraction</h2>
+  <form class="subtraction" action="">
+    <input
+      class="subtractionFN form-control"
+      type="text"
+      placeholder="First Number"
+    />
+    <input
+      class="subtractionSN form-control"
+      type="text"
+      placeholder="Second Number"
+    />
+    <p class="subtractionResult">Subtract Two Numbers To See The Results</p>
+    <button class="btn btn-primary">Subtract</button>
+    <button class="btn btn-danger" type="reset">Clear Form</button>
+  </form>
+
+  <!-- Multiplication -->
+  <h2>Learn Multiplication</h2>
+
+  <form class="multiplication" action="">
+    <input
+      class="multiplicationFN form-control"
+      type="text"
+      placeholder="First Number"
+    />
+    <input
+      class="multiplicationSN form-control"
+      type="text"
+      placeholder="Second Number"
+    />
+    <p class="multiplicationResult">Multiply Two Numbers To See The Results</p>
+    <button class="btn btn-primary">Multiply</button>
+    <button class="btn btn-danger" type="reset">Clear Form</button>
+  </form>
+  <h2>Learn Division</h2>
+
+  <form class="division" action="">
+    <input
+      class="divisionFN form-control"
+      type="text"
+      placeholder="First Number"
+    />
+    <input
+      class="divisionSN form-control"
+      type="text"
+      placeholder="Second Number"
+    />
+    <p class="divisionResult">Divide Two Numbers To See The Results</p>
+    <button class="btn btn-primary">Divide</button>
+    <button class="btn btn-danger" type="reset">Clear Form</button>
+  </form>
+
+  <!-- Generate Multiplication Table -->
+</center>
+{% load static %}
+<script src="{% static 'scripts/learn.js'%}"></script>
+{%endblock%}

@@ -6,5 +6,6 @@ urlpatterns = [
     path('subtraction.html',views.subtraction, name="subtraction"),
     path('multiplication.html',views.multiplication, name="multiplication"),
     path('division.html',views.division, name="division"),
-    path('game.html',views.game, name="game")
+    path('game.html',views.game, name="game"),
+    path('learn.html',views.learn,name="learn")
 ]
