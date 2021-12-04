@@ -26,8 +26,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    # allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    # Local apps
     'website',
     'members',
+
 ]
 
 MIDDLEWARE = [
@@ -59,7 +67,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'mathGame.wsgi.application'
-
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -121,3 +132,17 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS= [
     os.path.join(BASE_DIR, 'static')
 ]
+
+SITE_ID = 2
+LOGIN_REDIRECT_URL = '/'
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
+}
