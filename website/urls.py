@@ -1,5 +1,9 @@
 from django.urls import path
 from . import views
+
+"""
+List of URL related to the main website
+"""
 urlpatterns = [
     path('',views.home, name="home"),
     path('addition.html',views.addition, name="addition"),

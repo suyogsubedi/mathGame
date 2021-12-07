@@ -1,6 +1,9 @@
 from django.contrib import admin
 from django.urls import path,include
 
+"""
+All the parents URL for the application
+"""
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('website.urls')),

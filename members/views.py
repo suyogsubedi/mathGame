@@ -5,6 +5,9 @@ from django.contrib.auth.forms import UserCreationForm
 # Importing the Registered UserForm
 from members.forms import RegisterUserForm
 
+"""
+    This view is used to log users in
+"""
 def login_user(request):
     if request.method=="POST":
         username = request.POST['username']
@@ -18,12 +21,17 @@ def login_user(request):
             return redirect('login')
     else:
         return render(request,'authentication/login.html' )
-
+"""
+    This view is used to log users out
+"""
 def logout_user(request):
     logout(request)
     messages.success(request,("You have been logged out"))
     return redirect('home')
 
+"""
+    This view is used to register a new user
+"""
 def register_user(request):
     if request.method =="POST":
         form = RegisterUserForm(request.POST)

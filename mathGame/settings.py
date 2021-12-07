@@ -19,6 +19,9 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+"""
+List of installed application that are required for the application to work
+"""
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -75,6 +78,10 @@ AUTHENTICATION_BACKENDS = [
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
+"""
+Database used in the project
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -129,12 +136,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Static File Location
 STATIC_URL = '/static/'
 
+"""
+    Static files directory, where custom JS and CSS are stored
+"""
 STATICFILES_DIRS= [
     os.path.join(BASE_DIR, 'static')
 ]
 
+
 SITE_ID = 2
 LOGIN_REDIRECT_URL = '/'
+"""
+Social authentication provider
+"""
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': [

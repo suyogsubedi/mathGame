@@ -12,16 +12,18 @@ additionForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const firstValue = additionForm.querySelector(".additionFN").value;
   const secondValue = additionForm.querySelector(".additionSN").value;
-  if (firstValue)
-    additionResult.innerHTML = parseInt(firstValue) + parseInt(secondValue);
+  boilerplate = `${firstValue} + ${secondValue} = `;
+  let result = parseInt(firstValue) + parseInt(secondValue);
+  additionResult.innerHTML = boilerplate + result;
 });
 
 subtractionForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const firstValue = subtractionForm.querySelector(".subtractionFN").value;
   const secondValue = subtractionForm.querySelector(".subtractionSN").value;
-  if (firstValue)
-    subtractionResult.innerHTML = parseInt(firstValue) - parseInt(secondValue);
+  boilerplate = `${firstValue} - ${secondValue} = `;
+  let result = parseInt(firstValue) - parseInt(secondValue);
+  subtractionResult.innerHTML = boilerplate + result;
 });
 
 multiplicationForm.addEventListener("submit", (e) => {
@@ -30,15 +32,16 @@ multiplicationForm.addEventListener("submit", (e) => {
     multiplicationForm.querySelector(".multiplicationFN").value;
   const secondValue =
     multiplicationForm.querySelector(".multiplicationSN").value;
-  if (firstValue)
-    multiplicationResult.innerHTML =
-      parseInt(firstValue) * parseInt(secondValue);
+  boilerplate = `${firstValue} * ${secondValue} = `;
+  let result = parseInt(firstValue) * parseInt(secondValue);
+  multiplicationResult.innerHTML = boilerplate + result;
 });
 
 divisionForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const firstValue = divisionForm.querySelector(".divisionFN").value;
   const secondValue = divisionForm.querySelector(".divisionSN").value;
-  if (firstValue)
-    divisionResult.innerHTML = parseInt(firstValue) / parseInt(secondValue);
+  boilerplate = `${firstValue} / ${secondValue} = `;
+  let result = parseInt(firstValue) / parseInt(secondValue);
+  divisionResult.innerHTML = boilerplate + result;
 });
