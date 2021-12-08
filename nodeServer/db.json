@@ -1,0 +1,20 @@
+[
+  {
+    "websiteName": "Khan Academy",
+    "url": "https://www.khanacademy.org/",
+    "image": "/images/khan_academy.png",
+    "free": "Free To Use"
+  },
+  {
+    "websiteName": "Fun Brain",
+    "url": "https://www.funbrain.com/",
+    "image": "/images/funbrain.png",
+    "free": "Free To Use"
+  },
+  {
+    "websiteName": "Learn Zillion",
+    "url": "https://learnzillion.com/p/",
+    "image": "/images/learn_zillion.png",
+    "free": "Free To Use"
+  }
+]

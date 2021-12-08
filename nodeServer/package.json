@@ -1,0 +1,12 @@
+{
+  "name": "node-server",
+  "version": "1.0.0",
+  "description": "node server which sends back website list",
+  "main": "index.js",
+  "author": "suyog subedi",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

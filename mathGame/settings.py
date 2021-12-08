@@ -140,7 +140,9 @@ STATIC_URL = '/static/'
     Static files directory, where custom JS and CSS are stored
 """
 STATICFILES_DIRS= [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static'),
+    
+
 ]
 
 

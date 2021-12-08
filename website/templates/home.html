@@ -12,7 +12,17 @@
     <p>Here is a random number fact for you</p>
     <p class="fact">Loading...</p>
   </div>
+  <!-- Local API -->
+  <h3>Other Online Study Websites</h3>
+  <div class="local-api-parent-container">
+    <ul class="website-list">
+      <p class="temp-message">Make Sure The Node Server Is Running</p>
+      <!-- The li tags are added from javascript -->
+    </ul>
+  </div>
   {% load static %}
   <script src="{% static 'scripts/facts.js'%}"></script>
+  <script src="{% static 'scripts/localapicall.js'%}"></script>
+  <link rel="stylesheet" href="{% static 'css/localapi.css'%}" />
 </center>
 {%endblock%}
