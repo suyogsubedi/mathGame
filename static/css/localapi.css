@@ -70,3 +70,8 @@
     font-family: arial;
   }
 }
+
+/* User login to uppercase */
+.welcome-user {
+  text-transform: capitalize;
+}
