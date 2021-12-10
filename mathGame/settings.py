@@ -49,7 +49,17 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Session middleware
+    'django.contrib.sessions.middleware.SessionMiddleware',
 ]
+"""
+Session middleware will delete the session as soon as browswe is closed
+"""
+SESSION_EXPIRE_AT_BROWSER_CLOSE= True
+"""
+Session middleware will log the user out after this time (seconds)
+"""
+SESSION_COOKIE_AGE= 900
 
 ROOT_URLCONF = 'mathGame.urls'
 
