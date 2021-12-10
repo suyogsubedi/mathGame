@@ -6,12 +6,8 @@ fetch("http://numbersapi.com/random/year?json")
     return response.json();
   })
   .then((data) => {
-    console.log(data);
     fact.innerHTML = data.text;
   })
   .catch((err) => {
     console.log("rejected", err);
   });
-
-// Use this api later
-// http://numbersapi.com/7/

@@ -7,7 +7,8 @@
   <div class="shadow-lg p-3 mb-5 bg-white rounded">
     {% if user.is_authenticated %}
     <h2 class="welcome-user">Welcome {{user.username}}</h2>
-
+    {% else %}
+    <h2 class="welcome-user">Welcome Harry Potter</h2>
     {% endif %}
     <p>Here is a random number fact for you</p>
     <div>

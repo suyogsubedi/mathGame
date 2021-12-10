@@ -17,10 +17,11 @@ def login_user(request):
             login(request,user)
             return redirect('home')
         else:
-            messages.success(request,("There was an error logging in, please try again"))
+            messages.success(request,("User Credential Wrong"))
             return redirect('login')
     else:
-        return render(request,'authentication/login.html' )
+        # return render(request,'authentication/login.html' )
+        return render(request,'accounts/login.html' )
 """
     This view is used to log users out
 """
@@ -46,6 +47,7 @@ def register_user(request):
     else:
         form = RegisterUserForm()
 
-    return render(request, 'authentication/register_user.html',{
+ 
+    return render(request, 'accounts/register_user.html',{
         'form':form
     })

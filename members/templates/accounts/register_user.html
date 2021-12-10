@@ -26,8 +26,13 @@
     {{ form.as_p }}
 
     <br />
-    <input type="submit" value="submit" class="btn btn-secondary" />
+    <input type="submit" value="Register" class="btn btn-secondary" />
   </form>
+  <br />
+  {% load socialaccount %}
+  <a class="btn btn-primary" href="{% provider_login_url 'google' %}"
+    >Register With Google</a
+  >
 </div>
 
 {% endblock %}
