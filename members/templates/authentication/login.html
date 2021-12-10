@@ -27,7 +27,9 @@
     </form>
     <br>
     <!-- name='account_login' -->
-    <a class="btn btn-primary" href="{% url 'account_login' %}">Login With Google</a>
+    {% load socialaccount %}
+
+    <a class="btn btn-primary" href="{% provider_login_url 'google' %}">Login With Google</a>
   </div>
 
 {%endblock%}
