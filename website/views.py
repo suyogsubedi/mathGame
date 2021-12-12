@@ -1,19 +1,23 @@
 from django.shortcuts import render
 
-"""
-This view redners the homepage of the application
-"""
+
 def home(request):
+    """
+    This view redners the homepage of the application
+    """
     return render(request, 'home.html',{})
 
-"""
-This view renders the addition page 
 
-Generates two random numbers
-
-Checks the answer provided by the user and provides a feedback
-"""
 def addition(request):
+    """
+    This view renders the addition page 
+
+    Generates two random numbers
+
+    This function only accepts integer input
+
+    Checks the answer provided by the user and provides a feedback
+    """
     from random import randint 
     
     number1 = randint(0,20)
@@ -60,14 +64,18 @@ def addition(request):
         'number2':number2,
     })
 
-"""
-This view renders the subtraction page 
 
-Generates two random numbers
 
-Checks the answer provided by the user and provides a feedback
-"""
 def subtraction(request):
+    """
+    This view renders the subtraction page 
+
+    Generates two random numbers
+
+    This function only accepts integer input
+
+    Checks the answer provided by the user and provides a feedback
+    """
     from random import randint 
     
     number1 = randint(0,20)
@@ -114,14 +122,17 @@ def subtraction(request):
         'number2':number2,
     })
 
-"""
-This view renders the subtraction page 
 
-Generates two random numbers
-
-Checks the answer provided by the user and provides a feedback
-"""
 def multiplication(request):
+    """
+    This view renders the multiplication page 
+
+    Generates two random numbers from 0 to 20
+
+    This function only accepts integer input
+
+    Checks the answer provided by the user and provides a feedback
+    """
     from random import randint 
     
     number1 = randint(0,20)
@@ -168,15 +179,18 @@ def multiplication(request):
         'number2':number2,
     })
 
-"""
-This view renders the division page 
 
-Generates two random numbers
-
-Checks the answer provided by the user and provides a feedback
-"""
 
 def division(request):
+    """
+    This view renders the addition page 
+
+    Generates two random numbers, one from 0 to 20 and the other from 1 to 5
+
+    This function only accepts integer input
+
+    Checks the answer provided by the user and provides a feedback
+    """
     from random import randint 
     
     number1 = randint(0,20)
@@ -228,19 +242,21 @@ def division(request):
 
 # Game
 
-"""
-This view renders the Game page
 
-The main logic behind this game is provided by JavaScript
-"""
 def game(request):
+    """
+    This view renders the Game page
+
+    The main logic behind this game is provided by JavaScript which is linked with game.html page
+    """
     return render(request,'game.html')
 
 # Learn
-"""
-This view renders the Learn Page
 
-The main logic behind this learning page is provided by JavaScript
-"""
 def learn(request):
+    """
+    This view renders the Learn Page
+
+    The main logic behind this learning page is provided by JavaScript which is linked with learn.html page
+    """
     return render(request,'learn.html')

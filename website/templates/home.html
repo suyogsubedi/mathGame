@@ -7,6 +7,7 @@
   <div class="shadow-lg p-3 mb-5 bg-white rounded">
     {% if user.is_authenticated %}
     <h2 class="welcome-user">Welcome {{user.username}}</h2>
+    <button id="show-date" class="btn btn-secondary">Today's Date</button>
     {% else %}
     <h2 class="welcome-user">Welcome Harry Potter</h2>
     {% endif %}
@@ -25,6 +26,7 @@
   </div>
   {% load static %}
   <script src="{% static 'scripts/facts.js'%}"></script>
+  <script src="{% static 'scripts/script.js'%}"></script>
   <script src="{% static 'scripts/localapicall.js'%}"></script>
   <link rel="stylesheet" href="{% static 'css/localapi.css'%}" />
 </center>

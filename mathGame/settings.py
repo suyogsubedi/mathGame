@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     # Local apps
     'website',
     'members',
+    # Documentation
+    'django.contrib.admindocs',
+    
 
 ]
 

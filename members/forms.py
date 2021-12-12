@@ -4,11 +4,15 @@ from django import forms
 from django.forms.widgets import EmailInput, TextInput
 
 
-"""
-    Inheriting from from UserCreationForm
-    This form is used to register a new user
-""" 
+
 class RegisterUserForm(UserCreationForm):
+    """
+    Inheriting from from UserCreationForm
+
+    This form contains field for registering a new user
+
+    email, first_name, last_name fields added to the RegisterUserForm which inherits from UserCreationForm
+""" 
     email = forms.EmailField(widget=EmailInput(attrs={'class':'form-control'}))
     first_name = forms.CharField(max_length=75,widget=TextInput(attrs={'class':'form-control'}))
     last_name = forms.CharField(max_length=75,widget=TextInput(attrs={'class':'form-control'}))
